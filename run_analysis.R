@@ -1,5 +1,5 @@
 #Assignment: Getting and Cleaning Data Course Project
-library(dplyr)
+library(dplyr) 
 #The script assumes that it will be run inside the UCI HAR Dataset directory
 
 #1. Merges the training and the test sets to create one data set.
@@ -57,4 +57,4 @@ summaryData <- summarise_each(group_by(relevantEntries,activityLabel, subject), 
 #1         LAYING       1         0.2215982       -0.04051395        -0.1132036
 #And so on.
 #Can also output to disk by uncommenting the following
-#write.csv(summaryData, file = "summaryData.csv")
+write.table(summaryData, file = "summaryData.csv", row.names = FALSE)
